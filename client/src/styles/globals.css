@@ -1,0 +1,25 @@
+:root {
+  /* Colors */
+  --color-background: #0d0b09;
+  --color-surface: #1a1613;
+  --color-gold: #b88a44;
+  --color-paper: #d8c7a1;
+  --color-burgundy: #5a2020;
+  --color-text: #f5f2eb;
+
+  /* Fonts */
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Shadows */
+  --shadow-gold: 0 0 20px rgba(184, 138, 68, 0.25);
+
+  /* Animation */
+  --transition: 250ms ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
