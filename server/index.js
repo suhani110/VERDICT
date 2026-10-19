@@ -12,15 +12,20 @@ const { startGame } = require("./game/gameEngine");
 const app = express();
 const server = http.createServer(app);
 
+
+const clientUrl =
+  process.env.CLIENT_URL || "http://localhost:5173";
+
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: clientUrl,
     methods: ["GET", "POST"],
   },
 });
 
-app.use(cors());
+app.use(cors({ origin: clientUrl }));
 app.use(express.json());
+
 
 app.use("/api/lobby", lobbyRoutes);
 
